@@ -5,15 +5,14 @@ A repository with GitHub Codespaces configuration that includes Claude Code with
 ## Setup
 
 1. Fork this repository
-2. Create a Codespace from your fork
-3. Set your `ANTHROPIC_API_KEY` environment variable in GitHub Codespaces secrets:
+2. Launch your Codespace by clicking "..." then "New with options..."
+3. Enter your anthropic api key and be sure to choose "US West" or "Southeast Asia" as the region for a fast startup.
+
+You can also set your `ANTHROPIC_API_KEY` environment variable directly in GitHub Codespaces secrets:
    - Go to [GitHub Codespaces Settings](https://github.com/settings/codespaces)
    - Click "New secret"
    - Name: `ANTHROPIC_API_KEY`
    - Value: Your API key from [Anthropic Console](https://console.anthropic.com/keys)
-   - Select your forked repository
-
-4. Launch your Codespace - you'll see a prompt if the API key isn't set
 
 ## Using Claude Code
 

@@ -10,12 +10,14 @@
 		"ghcr.io/devcontainers/features/python:1": {},
 		"ghcr.io/devcontainers-community/features/deno:1": {}
 	},
-	"postCreateCommand": "pnpm setup && pnpm install -g @anthropic-ai/claude-code && chmod +x .devcontainer/setup-api-key.sh",
-	"postStartCommand": ".devcontainer/setup-api-key.sh",
+	"postCreateCommand": "pnpm install -g @anthropic-ai/claude-code",
+	"updateContentCommand": ".devcontainer/setup-api-key.sh",
 	"remoteEnv": {
-		"ANTHROPIC_API_KEY": "${localEnv:ANTHROPIC_API_KEY}"
+		"ANTHROPIC_API_KEY": "${localEnv:ANTHROPIC_API_KEY}",
+		"PNPM_HOME": "/home/vscode/.local/share/pnpm",
+  		"PATH": "${containerEnv:PNPM_HOME}:$PATH"
 	},
-        "secrets": {
+    "secrets": {
 		"ANTHROPIC_API_KEY": {
 			"description": "Anthropic Claude API Key",
 			"documentationUrl": "https://console.anthropic.com/keys"
