@@ -6,10 +6,18 @@ if [ -z "${ANTHROPIC_API_KEY}" ]; then
   echo "To use Claude Code, you'll need an anthropic account.  You'll be prompted to login the first time you run `claude`"
   exit 1
 else
-  mkdir ~/.claude
-  echo '{"apiKeyHelper": "~/.claude/anthropic_key.sh"}' > ~/.claude/settings.json
-  echo '#!/usr/bin/env bash\necho $ANTHROPIC_API_KEY' > ~/.claude/anthropic_key.sh
+  mkdir -p ~/.claude
+  cat > ~/.claude/settings.json <<EOF
+{ "apiKeyHelper": "~/.claude/anthropic_key.sh" }
+EOF
+
+  cat > ~/.claude/anthropic_key.sh <<'EOF'
+#!/usr/bin/env bash
+echo $ANTHROPIC_API_KEY
+EOF
+
   chmod +x ~/.claude/anthropic_key.sh
+
   echo "✅ ANTHROPIC_API_KEY is set"
-  echo "Claude Code is ready to use. Run the following in your terminal: claude"
+  echo "Claude Code is ready. Run: claude"
 fi
