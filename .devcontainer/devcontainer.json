@@ -1,5 +1,5 @@
 {
-  "name": "Claude Code & Codex Environment",
+  "name": "Claude Code / Codex Environment",
   "image": "ghcr.io/openai/codex-universal:latest",
   "onCreateCommand": ".devcontainer/post-create.sh",
   "updateContentCommand": ".devcontainer/setup-api-key.sh",
