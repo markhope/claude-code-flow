@@ -4,7 +4,6 @@ if [ -z "${ANTHROPIC_API_KEY}" ]; then
   echo "⚠️ ANTHROPIC_API_KEY is not set ⚠️"
   echo ""
   echo "To use Claude Code, you'll need an anthropic account.  You'll be prompted to login the first time you run `claude`"
-  exit 1
 else
   mkdir -p ~/.claude
   cat > ~/.claude/settings.json <<EOF
