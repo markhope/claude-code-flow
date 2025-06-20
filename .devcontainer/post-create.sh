@@ -7,4 +7,4 @@ export PATH="$PNPM_HOME:$NVM_BIN:$PATH"
 export SHELL=$(which bash)
 pnpm setup
 
-pnpm install -g @anthropic-ai/claude-code @openai/codex
+pnpm install -g @anthropic-ai/claude-code
