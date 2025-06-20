@@ -1,6 +1,6 @@
 {
   "name": "Claude Flow Dev",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:18",
+  "image": "ghcr.io/openai/codex-universal:latest",
   "postCreateCommand": "npm install -g npm && npm install",
   "forwardPorts": [3000],
   "customizations": {
